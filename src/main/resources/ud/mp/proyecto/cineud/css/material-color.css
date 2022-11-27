@@ -1,0 +1,72 @@
+
+/*
+    Created on : 25/10/2018, 08:00:15
+    Author     : Gleidson Neves da Silveira
+    Colors for productivity
+*/
+
+.root {
+/* bootstrap */
+  -base   : #1F2937;
+  -base-secondary : #253554;
+  -base-tertiary   : #61708D;
+  -black   : #000000;
+  -yellow: #FCD34D;
+  -yellow-dark: #dc9e00;
+  -danger    : #FF3547;
+  -success   : #02C852;
+  -unique    : #880E4F;
+  -elegant   : #2E2E2E;
+
+}
+
+.transparent
+ {
+  -fx-background-color : transparent;
+}
+
+.base {
+  -fx-background-color : -base;
+}
+
+.base-secondary {
+  -fx-background-color : -base-secondary;
+}
+
+.base-tertiary {
+  -fx-background-color : -base-tertiary;
+}
+
+.black
+{
+    -fx-background-color : -black;
+}
+.yellow
+{
+    -fx-background-color : -yellow;
+}
+
+.success
+{
+    -fx-background-color : -success;
+}
+
+.warning
+{
+    -fx-background-color : -warning;
+}
+
+.danger
+{
+    -fx-background-color : -danger;
+}
+
+.unique
+{
+  -fx-background-color : -unique;
+}
+
+.elegant
+{
+  -fx-background-color : -elegant;
+}

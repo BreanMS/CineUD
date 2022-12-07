@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: -base;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@../../assets/styles/bootstrap.css" />
+      <URL value="@../../assets/styles/custom.css" />
+      <URL value="@../../assets/styles/material-color.css" />
+      <URL value="@../../assets/styles/typographic.css" />
+      <URL value="@../../assets/styles/login.css" />
+      <URL value="@../../assets/styles/dark.css" />
+      <URL value="@../../assets/styles/helpers.css" />
+   </stylesheets>
+</AnchorPane>

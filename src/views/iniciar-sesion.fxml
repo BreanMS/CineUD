@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: -base;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="8.0" layoutY="6.0" prefHeight="1012.0" prefWidth="1428.0">
+         <items>
+            <AnchorPane id="AnchorPane" prefHeight="1010.0" prefWidth="720.0" style="-fx-background-color: -base;">
+               <children>
+                  <Label layoutX="190.0" layoutY="136.0" prefHeight="93.0" prefWidth="390.0" style="-fx-font-family: Roboto Regular;" styleClass="h1" text="Inicia Sesion" textAlignment="CENTER">
+                     <font>
+                        <Font name="SansSerif Regular" size="64.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="148.0" layoutY="332.0" prefHeight="369.0" prefWidth="451.0" spacing="31.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="20.0" prefWidth="281.0" style="-fx-font-family: Roboto Regular;" styleClass="h4" text="Email" textAlignment="CENTER">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <MFXTextField prefHeight="51.0" prefWidth="464.0" styleClass="text-field-custom" />
+                        <Label layoutX="10.0" layoutY="353.0" prefWidth="281.0" styleClass="h4" text="Contraseña" textAlignment="CENTER">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <MFXPasswordField prefHeight="51.0" prefWidth="466.0" styleClass="text-field-custom" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="468.0" style="-fx-font-family: Roboto Regular;" styleClass="h5" text="Olvide la contraseña" textAlignment="CENTER">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="10.0" layoutY="188.0" mnemonicParsing="false" prefWidth="462.0" style="-fx-background-color: -yellow; -fx-font-size: 24;" text="Iniciar Sesion">
+                           <styleClass>
+                              <String fx:value="btn-large" />
+                              <String fx:value="depth-3" />
+                           </styleClass>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="412.0" mnemonicParsing="false" prefWidth="469.0" style="-fx-background-color: transparent;" text="No tienes una cuenta? Registrate">
+                           <styleClass>
+                              <String fx:value="btn-large" />
+                              <String fx:value="h5" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="1010.0" prefWidth="727.0" style="-fx-background-color: -yellow;">
+               <children>
+                  <ImageView fitHeight="484.0" fitWidth="422.0" layoutX="155.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/logos/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+   <stylesheets>
+      <URL value="@assets/styles/bootstrap.css" />
+      <URL value="@assets/styles/custom.css" />
+      <URL value="@assets/styles/material-color.css" />
+      <URL value="@assets/styles/typographic.css" />
+      <URL value="@assets/styles/login.css" />
+      <URL value="@assets/styles/dark.css" />
+      <URL value="@assets/styles/helpers.css" />
+   </stylesheets>
+</AnchorPane>

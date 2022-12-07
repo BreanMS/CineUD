@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="233.0" prefWidth="1401.0" style="-fx-background-color: -base;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@../../assets/styles/bootstrap.css" />
+      <URL value="@../../assets/styles/custom.css" />
+      <URL value="@../../assets/styles/material-color.css" />
+      <URL value="@../../assets/styles/typographic.css" />
+      <URL value="@../../assets/styles/login.css" />
+      <URL value="@../../assets/styles/dark.css" />
+      <URL value="@../../assets/styles/helpers.css" />
+   </stylesheets>
+   <children>
+      <VBox layoutX="28.0" layoutY="31.0" prefHeight="200.0" prefWidth="1339.0" spacing="20.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1313.0" spacing="1150.0">
+               <children>
+                  <Label prefHeight="53.0" prefWidth="196.0" styleClass="h3" text="Titan" />
+                  <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" rotate="270.0" y="15.0">
+                     <image>
+                        <Image url="@assets/logos/left-arrow.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Line endX="1236.171630859375" endY="-1.8284270763397217" startX="-100.0" stroke="WHITE" strokeWidth="4.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="176.0" text="10:30 AM">
+                     <styleClass>
+                        <String fx:value="btn-schedule" />
+                        <String fx:value="buttons-text-schedule" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

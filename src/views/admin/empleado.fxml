@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="117.0" prefWidth="1439.0" style="-fx-background-color: -base;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@../assets/styles/bootstrap.css" />
+      <URL value="@../assets/styles/custom.css" />
+      <URL value="@../assets/styles/material-color.css" />
+      <URL value="@../assets/styles/typographic.css" />
+      <URL value="@../assets/styles/login.css" />
+      <URL value="@../assets/styles/dark.css" />
+      <URL value="@../assets/styles/helpers.css" />
+   </stylesheets>
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="12.0" layoutY="4.0" prefHeight="100.0" prefWidth="1432.0" spacing="94.0" styleClass="employee-details">
+         <children>
+            <Label style="-fx-text-fill: white;" styleClass="h3" text="Codigo" />
+            <Label layoutX="11.0" layoutY="34.0" style="-fx-text-fill: white;" styleClass="h3" text="Nombre" />
+            <Label layoutX="147.0" layoutY="34.0" style="-fx-text-fill: white;" styleClass="h3" text="Cargo" />
+            <Label layoutX="299.0" layoutY="34.0" style="-fx-text-fill: white;" styleClass="h3" text="Contrato" />
+            <Label layoutX="415.0" layoutY="34.0" style="-fx-text-fill: white;" styleClass="h3" text="Salario" />
+            <Label layoutX="576.0" layoutY="34.0" style="-fx-text-fill: white;" styleClass="h3" text="Cedula" />
+            <Label layoutX="737.0" layoutY="34.0" style="-fx-text-fill: white;" styleClass="h3" text="Telefono" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

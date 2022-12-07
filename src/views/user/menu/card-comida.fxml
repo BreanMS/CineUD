@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" prefWidth="343.0" style="-fx-background-color: -base;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@../../assets/styles/bootstrap.css" />
+      <URL value="@../../assets/styles/custom.css" />
+      <URL value="@../../assets/styles/material-color.css" />
+      <URL value="@../../assets/styles/typographic.css" />
+      <URL value="@../../assets/styles/login.css" />
+      <URL value="@../../assets/styles/dark.css" />
+      <URL value="@../../assets/styles/helpers.css" />
+   </stylesheets>
+   <children>
+      <VBox alignment="CENTER" layoutX="-6.0" layoutY="-23.0" prefHeight="281.0" prefWidth="347.0" spacing="10.0">
+         <children>
+            <ImageView fitHeight="205.0" fitWidth="347.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../assets/images/carlos-davila-cepeda-yVFr_D_PxkQ-unsplash.jpg" />
+               </image>
+            </ImageView>
+            <Label style="-fx-font-weight: 100;" styleClass="h3" text="Hamburguesas">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="69.0" layoutY="232.0" style="-fx-font-weight: 100; -fx-text-fill: -yellow;" styleClass="h4" text="\$4.99" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

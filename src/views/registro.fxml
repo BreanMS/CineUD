@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: -base;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.368366285119667" layoutX="-1.0" layoutY="6.0" prefHeight="1081.0" prefWidth="1924.0">
+         <items>
+            <AnchorPane prefHeight="1010.0" prefWidth="727.0" style="-fx-background-color: -yellow;">
+               <children>
+                  <ImageView fitHeight="484.0" fitWidth="422.0" layoutX="135.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logos/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="AnchorPane" prefHeight="1010.0" prefWidth="720.0" style="-fx-background-color: -base;">
+               <children>
+                  <Label alignment="CENTER" layoutX="407.0" layoutY="62.0" prefHeight="93.0" prefWidth="390.0" style="-fx-font-family: Roboto Regular;" styleClass="h1" text="Registrate" textAlignment="CENTER">
+                     <font>
+                        <Font name="SansSerif Regular" size="64.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="59.0" layoutY="203.0" prefHeight="774.0" prefWidth="1122.0" spacing="50.0">
+                     <children>
+                        <VBox prefHeight="772.0" prefWidth="545.0" spacing="31.0">
+                           <children>
+                              <Label layoutX="10.0" layoutY="20.0" prefWidth="281.0" style="-fx-font-family: Roboto Regular;" styleClass="h4" text="Nombre" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <MFXTextField layoutX="10.0" layoutY="80.0" prefHeight="51.0" prefWidth="572.0" styleClass="text-field-custom" />
+                              <Label layoutX="10.0" layoutY="20.0" prefWidth="281.0" style="-fx-font-family: Roboto Regular;" styleClass="h4" text="Cedula" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <MFXTextField prefHeight="51.0" prefWidth="572.0" styleClass="text-field-custom" />
+                              <Label prefWidth="281.0" style="-fx-font-family: Roboto Regular;" styleClass="h4" text="Telefono" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <MFXTextField prefHeight="51.0" prefWidth="572.0" styleClass="text-field-custom" />
+                              <Label prefWidth="281.0" styleClass="h4" text="Confirmar Contraseña" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <MFXPasswordField prefHeight="51.0" prefWidth="562.0" styleClass="text-field-custom" />
+                           </children>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="11.0" layoutY="11.0" prefHeight="772.0" prefWidth="509.0" spacing="31.0">
+                           <children>
+                              <Label layoutX="10.0" layoutY="20.0" prefWidth="281.0" style="-fx-font-family: Roboto Regular;" styleClass="h4" text="Apellido" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <MFXTextField prefHeight="51.0" prefWidth="572.0" styleClass="text-field-custom" />
+                              <Label layoutX="10.0" layoutY="20.0" prefWidth="281.0" style="-fx-font-family: Roboto Regular;" styleClass="h4" text="Email" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <MFXTextField layoutX="10.0" layoutY="80.0" prefHeight="51.0" prefWidth="572.0" styleClass="text-field-custom" />
+                              <Label prefWidth="281.0" styleClass="h4" text="Contraseña" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="SansSerif Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                              <MFXPasswordField prefHeight="51.0" prefWidth="562.0" styleClass="text-field-custom" />
+                           </children>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Button layoutX="434.0" layoutY="937.0" maxHeight="87.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="393.0" text="Registrarse">
+                     <styleClass>
+                        <String fx:value="btn-large" />
+                        <String fx:value="depth-3" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+   <stylesheets>
+      <URL value="@assets/styles/bootstrap.css" />
+      <URL value="@assets/styles/custom.css" />
+      <URL value="@assets/styles/material-color.css" />
+      <URL value="@assets/styles/typographic.css" />
+      <URL value="@assets/styles/login.css" />
+      <URL value="@assets/styles/dark.css" />
+      <URL value="@assets/styles/helpers.css" />
+   </stylesheets>
+</AnchorPane>

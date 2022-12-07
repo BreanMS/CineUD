@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="869.0" prefWidth="1420.0" style="-fx-background-color: -base;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@../../assets/styles/bootstrap.css" />
+      <URL value="@../../assets/styles/custom.css" />
+      <URL value="@../../assets/styles/material-color.css" />
+      <URL value="@../../assets/styles/typographic.css" />
+      <URL value="@../../assets/styles/dark.css" />
+      <URL value="@css/dark.css" />
+      <URL value="@../../assets/styles/helpers.css" />
+   </stylesheets>
+   <children>
+      <HBox layoutX="16.0" layoutY="22.0" prefHeight="760.0" prefWidth="1360.0" spacing="50.0">
+         <children>
+            <ImageView fitHeight="734.0" fitWidth="454.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../assets/images/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="752.0" prefWidth="1034.0">
+               <children>
+                  <VBox prefHeight="425.0" prefWidth="751.0" spacing="30.0">
+                     <children>
+                        <Label prefHeight="70.0" prefWidth="997.0" styleClass="h2" text="Top Gun: Maverick • 2022 • PG-13 • 2h 10m" textOverrun="CLIP" wrapText="true" />
+                        <HBox prefHeight="63.0" prefWidth="830.0">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/logos/star.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="50.0" fitWidth="51.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/logos/star.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="50.0" fitWidth="51.0" layoutX="62.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/logos/star.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="50.0" fitWidth="51.0" layoutX="113.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/logos/star.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="50.0" fitWidth="51.0" layoutX="164.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/logos/star.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h4" text="After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it." wrappingWidth="829.0971069335938" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="152.0" prefWidth="639.0" spacing="30.0">
+                     <children>
+                        <Line endX="489.3333740234375" layoutX="112.0" layoutY="75.0" startX="-100.0" stroke="WHITE" strokeWidth="4.0" />
+                        <HBox prefHeight="37.0" prefWidth="600.0">
+                           <children>
+                              <Label styleClass="h4" text="Director :" />
+                              <Text fill="#fcd34d" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h4" text=" Joseph Kosinski" />
+                           </children>
+                        </HBox>
+                        <Line endX="489.3333740234375" startX="-100.0" stroke="WHITE" strokeWidth="4.0" />
+                        <HBox prefHeight="27.0" prefWidth="639.0">
+                           <children>
+                              <Label styleClass="h4" text="Pais de Origen :" />
+                              <Text fill="#fcd34d" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h4" text=" Estados Unidos" />
+                           </children>
+                        </HBox>
+                        <Line endX="489.3333740234375" layoutX="112.0" layoutY="208.0" startX="-100.0" stroke="WHITE" strokeWidth="4.0" />
+                        <HBox prefHeight="48.0" prefWidth="639.0" spacing="10.0">
+                           <children>
+                              <Label styleClass="h4" text="Lenguaje :" />
+                              <Text fill="#fcd34d" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h4" text=" Ingles, Español" />
+                           </children>
+                        </HBox>
+                        <Line endX="489.3333740234375" layoutX="112.0" layoutY="208.0" startX="-100.0" stroke="WHITE" strokeWidth="4.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="25.0" layoutY="791.0" styleClass="h3" text="Funciones por Multiplex" />
+   </children>
+</AnchorPane>

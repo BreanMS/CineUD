@@ -139,23 +139,22 @@
 .scroll-pane .viewport,
 .scroll-pane .corner
 {
-  -fx-border-color : -yellow;
+  -fx-border-color : -base;
   -fx-background-color : -base;
 }
 
 .scroll-pane
  {
-    -fx-background-color : -yellow;
+    -fx-background-color : -base;
 }
 
 .scroll-bar .thumb,
 .scroll-bar .thumb:hover,
 .scroll-bar .thumb:hover:pressed
 {
-  -fx-padding : 10px;
+  -fx-padding : 0px;
   -fx-background-radius : 0px;
   -fx-background-insets : 0px;
-  -fx-background-color : derive(-dark-gray, 30%);
 }
 
 
@@ -211,7 +210,7 @@
 {
   -fx-background-color : -elegant;
   -fx-border-color : -elegant;
-  -fx-padding : 20px;
+  -fx-padding : 0px;
 }
 
 .color-palette {

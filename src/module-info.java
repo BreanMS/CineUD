@@ -1,14 +1,20 @@
-module ud.mp.proyecto.cineud {
+module main {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
-
-    requires org.controlsfx.controls;
+    requires de.jensd.fx.glyphs.fontawesome;
     requires com.dlsc.formsfx;
     requires validatorfx;
-    requires org.kordamp.ikonli.javafx;
     requires eu.hansolo.tilesfx;
 
-    opens ud.mp.proyecto.cineud to javafx.fxml;
-    exports ud.mp.proyecto.cineud;
+    opens main to javafx.fxml;
+    exports main;
+    exports controller;
+    opens controller to javafx.fxml;
+    exports controller.user.peliculas;
+    opens controller.user.peliculas to javafx.fxml;
+    exports controller.user.sala;
+    opens controller.user.sala to javafx.fxml;
+    exports controller.admin;
+    opens controller.admin to javafx.fxml;
 }

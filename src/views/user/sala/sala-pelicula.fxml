@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1040.0" prefWidth="1920.0" style="-fx-background-color: -base;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.user.sala.SalaPeliculaController">
+   <stylesheets>
+      <URL value="@../../assets/styles/bootstrap.css" />
+      <URL value="@../../assets/styles/custom.css" />
+      <URL value="@../../assets/styles/material-color.css" />
+      <URL value="@../../assets/styles/typographic.css" />
+      <URL value="@../../assets/styles/login.css" />
+      <URL value="@../../assets/styles/dark.css" />
+      <URL value="@../../assets/styles/helpers.css" />
+   </stylesheets>
+   <children>
+      <VBox alignment="CENTER" layoutX="-1.0" layoutY="3.0" prefHeight="185.0" prefWidth="1922.0" style="-fx-background-color: #1F293D; -fx-padding: 10;">
+         <children>
+            <Label styleClass="h1" text="Multiplex Titan Plaza" />
+            <Label styleClass="h3" text="Top Gun: Maverick" />
+            <Label styleClass="text-schedule" text="10: 30 AM" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_LEFT" layoutX="77.0" layoutY="253.0" prefHeight="568.0" prefWidth="1819.0" spacing="50.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="566.0" prefWidth="338.0" spacing="20.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="390.0" spacing="15.0" styleClass="btn-details">
+                     <children>
+                        <Circle fill="#253554" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label styleClass="h3" text="General" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="390.0" spacing="15.0" styleClass="btn-details">
+                     <children>
+                        <Circle fill="#61708d" radius="23.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                        <Label styleClass="h3" text="Preferencial" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="390.0" spacing="15.0" styleClass="btn-details">
+                     <children>
+                        <Circle fill="#000a14" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label styleClass="h3" text="Ocupado" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="390.0" spacing="15.0" styleClass="btn-details">
+                     <children>
+                        <Circle fill="#fcd34d" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label styleClass="h3" text="Escogido" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <GridPane fx:id="gridSillas" prefHeight="0.0" prefWidth="0.0">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox layoutX="482.0" layoutY="907.0" prefHeight="100.0" prefWidth="1067.0" spacing="60.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="480.0" styleClass="text-schedule" text="Proceder al pago">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/logos/tickets.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="480.0" styleClass="text-schedule" text="Comprar Snacks">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/logos/burguer-black.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

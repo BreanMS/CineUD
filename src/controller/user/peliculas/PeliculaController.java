@@ -2,6 +2,7 @@ package controller.user.peliculas;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -18,9 +19,12 @@ public class PeliculaController {
     @FXML
     StackPane rootStackPane;
 
+
     @FXML
     private void detallesPelicula(MouseEvent event, StackPane rootStackPane) throws IOException {
         System.out.println("Change scene ma boy");
         changeScene("/views/user/peliculas/detalles-pelicula.fxml", rootStackPane);
     }
+
+
 }

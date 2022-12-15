@@ -5,17 +5,17 @@ package model;
 //mientras el estado seria una clase para definir cambios dependiendo el estado
 
 
-public abstract class Silla {
-    private String id;
-    private TipoSilla tipo;
-    private Integer precio;
-    private EstadoSilla estadoSilla;
+public class Silla {
+    public String id;
+    public TipoSilla tipo;
+    public Integer precio;
+    public EstadoSilla estadoSilla;
 
-    enum TipoSilla {
+    public enum TipoSilla {
         GENERAL,
         PREFERENCIAL
     }
-    enum EstadoSilla {
+    public enum EstadoSilla {
         DISPONIBLE,
         ELEGIDA,
         OCUPADA,

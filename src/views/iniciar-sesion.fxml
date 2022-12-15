@@ -47,7 +47,7 @@
                                     <Font name="SansSerif Regular" size="12.0" />
                                  </font>
                               </Label>
-                              <MFXTextField fx:id="txtEmail" prefHeight="51.0" prefWidth="513.0" styleClass="text-field-custom" />
+                              <MFXTextField fx:id="txtEmail" prefHeight="51.0" prefWidth="513.0" styleClass="text-field-custom" text="asdasdasd" />
                               <Label layoutX="10.0" layoutY="353.0" prefWidth="281.0" styleClass="h3" text="Contraseña" textAlignment="CENTER">
                                  <font>
                                     <Font name="SansSerif Regular" size="12.0" />

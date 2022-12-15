@@ -1,4 +1,4 @@
-package model;
+package utils.designpatterns;
 
 public interface FacturaCommand {
 

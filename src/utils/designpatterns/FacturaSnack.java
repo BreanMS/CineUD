@@ -1,4 +1,8 @@
-package model;
+package utils.designpatterns;
+
+import model.Factura;
+import model.Snack;
+import utils.designpatterns.FacturaCommand;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,8 @@
-package model;
+package utils.designpatterns;
 
 import java.util.ArrayList;
 
-public class FacturaInvocador {
+public class FacturaInvoker {
 
     private ArrayList<FacturaCommand> facturaCommands = new ArrayList<>();
 

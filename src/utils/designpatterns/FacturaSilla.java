@@ -1,4 +1,7 @@
-package model;
+package utils.designpatterns;
+
+import model.Factura;
+import model.Silla;
 
 import java.util.ArrayList;
 

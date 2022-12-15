@@ -1,4 +1,11 @@
-package model;
+package utils.designpatterns;
+
+import model.Factura;
+import model.Silla;
+import model.Snack;
+import utils.designpatterns.FacturaInvoker;
+import utils.designpatterns.FacturaSilla;
+import utils.designpatterns.FacturaSnack;
 
 import java.util.ArrayList;
 
@@ -20,7 +27,7 @@ public class testFactura {
         FacturaSnack fsk = new FacturaSnack(f, carritoSnack);
         FacturaSilla fs = new FacturaSilla(f, carritoSilla);
 
-        FacturaInvocador fi = new FacturaInvocador();
+        FacturaInvoker fi = new FacturaInvoker();
         fi.recibirPedidos(fsk);
         fi.recibirPedidos(fs);
 

@@ -6,7 +6,7 @@ module main {
     requires com.dlsc.formsfx;
     requires validatorfx;
     requires eu.hansolo.tilesfx;
-    requires org.json;
+    //requires org.json;
     requires MaterialFX;
     requires java.sql;
 

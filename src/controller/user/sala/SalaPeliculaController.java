@@ -45,8 +45,7 @@ public class SalaPeliculaController implements Initializable {
     @FXML
     Label lblHorario;
     SillaController sillaController;
-    public List<Silla> sillasGNRL = new ArrayList<>();
-    public List<Silla> sillasPRFR = new ArrayList<>();
+    public List<Silla> sillas = new ArrayList<>();
     Button[] buttonList = new Button[40];
 
     Silla.TipoSilla sillaGeneral = Silla.TipoSilla.GENERAL;
@@ -55,6 +54,7 @@ public class SalaPeliculaController implements Initializable {
 
     PeliculaHolder peliculaHolder = PeliculaHolder.getInstance();
     SillaHolder sillaHolder = SillaHolder.getInstance();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -87,8 +87,6 @@ public class SalaPeliculaController implements Initializable {
                     row++;
                 }
 
-
-
                 column++;
                 gridSillas.add(anchorPane, column, row); //(child,column,row)
 
@@ -116,13 +114,12 @@ public class SalaPeliculaController implements Initializable {
 
         if (arrOfStr[0].equals("GNRL")){
             Silla sillaGNRL = new Silla(button.getId(), sillaGeneral, elegido,11000);
-            sillasGNRL.add(sillaGNRL);
-            return;
+            sillas.add(sillaGNRL);
         }
-//        if (arrOfStr[0].equals("PRFR")){
-        Silla sillaPRFR = new Silla(button.getId(), sillaPreferencial, elegido,11000);
-        sillasPRFR.add(sillaPRFR);
-//        }
+        if (arrOfStr[0].equals("PRFR")){
+        Silla sillaPRFR = new Silla(button.getId(), sillaPreferencial, elegido,15000);
+        sillas.add(sillaPRFR);
+        }
 
         button.setStyle("-fx-background-color: #FCD34D; -fx-font-fill: -black; -fx-text-fill: -black;");
 
@@ -140,12 +137,7 @@ public class SalaPeliculaController implements Initializable {
         Pelicula pelicula = new Pelicula("id",lblPelicula.getText(),lenguajes,123,"Accion");
 
         peliculaHolder.setPelicula(pelicula);
-        sillaHolder.setSilla(sillasGNRL);
-        sillaHolder.setSilla(sillasPRFR);
-
-
-        System.out.println(this.sillasGNRL);
-        System.out.println(this.sillasPRFR);
+        sillaHolder.setSilla(sillas);
 
         changeScene("/views/user/sala/pagar-ticket.fxml", rootStackPane);
 

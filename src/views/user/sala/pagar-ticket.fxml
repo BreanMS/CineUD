@@ -16,7 +16,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: -base;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:controller="controller.user.sala.PagarTicketController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: -base;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <stylesheets>
       <URL value="@../../assets/styles/bootstrap.css" />
       <URL value="@../../assets/styles/custom.css" />
@@ -27,16 +27,6 @@
       <URL value="@../../assets/styles/helpers.css" />
    </stylesheets>
    <children>
-      <HBox alignment="CENTER_LEFT" layoutX="58.0" layoutY="21.0" prefHeight="104.0" prefWidth="690.0">
-         <children>
-            <ImageView fitHeight="85.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../assets/logos/left-arrow.png" />
-               </image>
-            </ImageView>
-            <Label styleClass="h1" text="Pago" />
-         </children>
-      </HBox>
       <VBox layoutX="1163.0" layoutY="297.0" prefHeight="691.0" prefWidth="666.0" spacing="31.0">
          <children>
             <Label layoutX="10.0" layoutY="20.0" prefHeight="44.0" prefWidth="366.0" style="-fx-font-family: Roboto Regular;" styleClass="h3" text="Nombre de la Tarjeta" textAlignment="CENTER">
@@ -100,7 +90,7 @@
                         </ImageView>
                         <VBox prefHeight="466.0" prefWidth="580.0" spacing="30.0">
                            <children>
-                              <Label styleClass="h2" text="Top Gun: Maverick" />
+                              <Label fx:id="lblNombrePelicula" styleClass="h2" text="Top Gun: Maverick" />
                               <HBox prefHeight="256.0" prefWidth="451.0" spacing="40.0">
                                  <children>
                                     <VBox layoutX="11.0" layoutY="11.0" prefHeight="306.0" prefWidth="174.0" spacing="15.0">
@@ -113,10 +103,10 @@
                                     </VBox>
                                     <VBox prefHeight="306.0" prefWidth="339.0" spacing="5.0">
                                        <children>
-                                          <Label style="-fx-text-fill: -yellow;" styleClass="h4" text="Titan Plaza" />
-                                          <Label prefHeight="69.0" prefWidth="309.0" style="-fx-text-fill: -yellow;" styleClass="h4" text="12/04/2022, 20:10" />
-                                          <Label style="-fx-text-fill: -yellow;" styleClass="h4" text="3" />
-                                          <Label style="-fx-text-fill: -yellow;" styleClass="h4" text="4" />
+                                          <Label fx:id="lblMultplex" style="-fx-text-fill: -yellow;" styleClass="h4" text="Titan Plaza" />
+                                          <Label fx:id="lblFecha" prefHeight="69.0" prefWidth="309.0" style="-fx-text-fill: -yellow;" styleClass="h4" text="12/04/2022, 20:10" />
+                                          <Label fx:id="lblSala" style="-fx-text-fill: -yellow;" styleClass="h4" text="3" />
+                                          <Label fx:id="lblAsientosElegidos" style="-fx-text-fill: -yellow;" styleClass="h4" text="4" />
                                        </children>
                                     </VBox>
                                  </children>
@@ -128,7 +118,7 @@
                   <Line endX="602.6666870117188" startX="-185.3333282470703" stroke="WHITE" strokeWidth="5.0" />
                   <HBox prefHeight="256.0" prefWidth="451.0" spacing="40.0">
                      <children>
-                        <VBox layoutX="11.0" layoutY="11.0" prefHeight="206.0" prefWidth="442.0" spacing="22.0">
+                        <VBox fx:id="vbxDetallesProducto" layoutX="11.0" layoutY="11.0" prefHeight="206.0" prefWidth="442.0" spacing="22.0">
                            <children>
                               <Label styleClass="h4" text="2x Preferencial" />
                               <Label styleClass="h4" text="2x General" />
@@ -136,7 +126,7 @@
                               <Label prefHeight="35.0" prefWidth="165.0" styleClass="h4" text="HotDog" />
                            </children>
                         </VBox>
-                        <VBox prefHeight="306.0" prefWidth="339.0" spacing="10.0">
+                        <VBox fx:id="vbxPrecioProducto" prefHeight="306.0" prefWidth="339.0" spacing="10.0">
                            <children>
                               <Label style="-fx-text-fill: -yellow;" styleClass="h4" text="\$COP 22.000" />
                               <Label prefHeight="69.0" prefWidth="309.0" style="-fx-text-fill: -yellow;" styleClass="h4" text="\$COP 22.000" />
@@ -151,12 +141,12 @@
                      <children>
                         <VBox prefHeight="125.0" prefWidth="464.0" spacing="10.0">
                            <children>
-                              <Label styleClass="h4" text="IVA 19%" />
                               <Label prefHeight="53.0" prefWidth="245.0" styleClass="h4" text="Subtotal" />
+                              <Label styleClass="h4" text="IVA 19%" />
                               <Label styleClass="h4" text="Total" />
                            </children>
                         </VBox>
-                        <VBox prefHeight="242.0" prefWidth="306.0" spacing="10.0">
+                        <VBox fx:id="vbxPrecios" prefHeight="242.0" prefWidth="306.0" spacing="10.0">
                            <children>
                               <Label style="-fx-text-fill: -yellow;" styleClass="h4" text="\$COP 22.000" />
                               <Label prefHeight="53.0" prefWidth="222.0" style="-fx-text-fill: -yellow;" styleClass="h4" text="\$COP 30.000" />
@@ -165,30 +155,16 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox layoutX="10.0" layoutY="409.0" prefHeight="256.0" prefWidth="451.0" spacing="40.0">
-                     <children>
-                        <VBox layoutX="11.0" layoutY="11.0" prefHeight="206.0" prefWidth="442.0" spacing="22.0">
-                           <children>
-                              <Label styleClass="h4" text="2x Preferencial" />
-                              <Label styleClass="h4" text="2x General" />
-                              <Label prefHeight="35.0" prefWidth="189.0" styleClass="h4" text="PopCorn" />
-                              <Label prefHeight="35.0" prefWidth="165.0" styleClass="h4" text="HotDog" />
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="306.0" prefWidth="339.0" spacing="10.0">
-                           <children>
-                              <Label style="-fx-text-fill: -yellow;" styleClass="h4" text="\$COP 22.000" />
-                              <Label prefHeight="69.0" prefWidth="309.0" style="-fx-text-fill: -yellow;" styleClass="h4" text="\$COP 22.000" />
-                              <Label style="-fx-text-fill: -yellow;" styleClass="h4" text="\$COP 22.000" />
-                              <Label style="-fx-text-fill: -yellow;" styleClass="h4" text="\$COP 22.000" />
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
+                  <HBox layoutX="10.0" layoutY="409.0" prefHeight="256.0" prefWidth="451.0" spacing="40.0" />
                </children>
             </VBox>
          </content>
       </ScrollPane>
-      <FontAwesomeIconView fill="WHITE" layoutX="1004.0" layoutY="123.0" size="65" />
+      <HBox alignment="CENTER_LEFT" layoutX="44.0" layoutY="26.0" prefHeight="100.0" prefWidth="340.0" spacing="40.0">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="64" />
+            <Label styleClass="h1" text="Pago" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

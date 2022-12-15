@@ -1,10 +1,11 @@
 package model;
 
-public class Cliente extends Persona {
+public class Cliente  {
+    Usuario usuario;
     Integer puntos;
 
-    public Cliente(int cedula, String nombre, String email, int telefono, int puntos){
-        super(cedula,nombre,email,telefono);
+    public Cliente(Usuario usuario, Integer puntos){
+        this.usuario = usuario;
         this.puntos = puntos;
 
     }

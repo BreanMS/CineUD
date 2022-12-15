@@ -5,15 +5,15 @@ import java.lang.constant.Constable;
 public class Pelicula{
     private String id;
     private String titulo;
-    private String idioma;
-    private int duracion;
+    private String[] idiomas;
+    private Integer duracion;
     private String genero;
 
 
-    public Pelicula(String id, String titulo, String idioma, int duracion, String genero){
+    public Pelicula(String id, String titulo, String[] idiomas, Integer duracion, String genero){
         this.id = id;
         this.titulo = titulo;
-        this.idioma = idioma;
+        this.idiomas = idiomas;
         this.duracion = duracion;
         this.genero = genero;
     }
@@ -26,8 +26,8 @@ public class Pelicula{
         this.titulo = titulo;
     }
 
-    public void setIdioma(String idioma) {
-        this.idioma = idioma;
+    public void setIdioma(String[] idioma) {
+        this.idiomas = idioma;
     }
 
     public void setDuracion(int duracion) {
@@ -47,8 +47,8 @@ public class Pelicula{
         return titulo;
     }
 
-    public String getIdioma() {
-        return idioma;
+    public String[] getIdioma() {
+        return idiomas;
     }
 
     public int getDuracion() {

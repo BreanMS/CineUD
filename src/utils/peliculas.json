@@ -1,0 +1,16 @@
+{
+    "peliculas":[
+        {
+            "pelicula":{
+                "nombre" : "Gato Con Botas 2: El Último Deseo",
+                "descripcion":"Por primera vez en más de una década, DreamWorks Animation presenta una nueva aventura del universo de Shrek cuando el atrevido Gato con Botas descubre que su nueva pasión por el peligro y su desprecio por la seguridad han cobrado su precio. Gato se ha gastado ocho de sus nueve vidas, a pesar de haber perdido la cuenta en el camino. Recuperar esas vidas enviarán a Gato con Botas a su mayor búsqueda hasta ahora. El nominado al Premio de la Academia Antonio Banderas regresa como la voz del célebre Gato con Botas mientras se embarca en un viaje épico hacia el Bosque Negro para encontrar la mítica Estrella de los Deseos y recuperar sus vidas perdidas. Pero solo con una vida restante, Gato tendrá que pedir ayuda de su antigua amiga y némesis: la cautivadora Kitty Patitas Suaves.",
+                "lenguajes disponibles":"Inglés, Español",
+                "director":"Joel Crawford",
+                "reviews":8,
+                "pais-origen":"Estados Unidos",
+                "duracion-min":93,
+                "image":"https://static.wikia.nocookie.net/doblaje/images/b/b5/FiXU2JbXgAASRk2.jpeg/revision/latest?cb=20221125152051&path-prefix=es"
+            }
+        }
+    ]
+}

@@ -6,9 +6,12 @@ module main {
     requires com.dlsc.formsfx;
     requires validatorfx;
     requires eu.hansolo.tilesfx;
+    requires org.json;
+    requires MaterialFX;
+    requires java.sql;
 
-    opens main to javafx.fxml;
     exports main;
+    opens main to javafx.fxml;
     exports controller;
     opens controller to javafx.fxml;
     exports controller.user.peliculas;

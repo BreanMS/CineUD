@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -100,13 +101,9 @@
          </content>
       </ScrollPane>
       <Label layoutX="284.0" layoutY="938.0" styleClass="h2" text="Funciones por Multiplex" />
-      <HBox alignment="CENTER_LEFT" layoutX="41.0" layoutY="31.0" prefHeight="100.0" prefWidth="340.0">
+      <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="12.0" prefHeight="100.0" prefWidth="340.0" spacing="40.0">
          <children>
-            <ImageView fitHeight="90.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../assets/logos/left-arrow.png" />
-               </image>
-            </ImageView>
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="64" />
             <Label styleClass="h1" text="Peliculas" />
          </children>
       </HBox>

@@ -1,19 +1,36 @@
 package model;
-public class Silla {
-    private String id;
-    private String tipo;
-    private int precio;
 
-    public Silla(String id, String tipo, int precio){
+// las silla tendrian patron decorator ya que el precio cambia?
+//el wrapper define el precio de la silla segun tipo
+//mientras el estado seria una clase para definir cambios dependiendo el estado
+
+
+public abstract class Silla {
+    private String id;
+    private TipoSilla tipo;
+    private Integer precio;
+    private EstadoSilla estadoSilla;
+
+    enum TipoSilla {
+        GENERAL,
+        PREFERENCIAL
+    }
+    enum EstadoSilla {
+        DISPONIBLE,
+        ELEGIDA,
+        OCUPADA,
+    }
+    public Silla(String id, TipoSilla tipo, EstadoSilla estadoSilla,Integer precio){
         this.id = id;
         this.tipo = tipo;
         this.precio = precio;
+        this.estadoSilla = estadoSilla;
     }
     public void setId(String id) {
         this.id = id;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoSilla tipo) {
         this.tipo = tipo;
     }
 
@@ -25,7 +42,7 @@ public class Silla {
         return id;
     }
 
-    public String getTipo() {
+    public TipoSilla getTipo() {
         return tipo;
     }
 

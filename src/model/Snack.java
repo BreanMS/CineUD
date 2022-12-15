@@ -3,9 +3,9 @@ package model;
 public class Snack{
     private String id;
     private String nombre;
-    private int precio;
+    private Integer precio;
 
-    public Snack(String id, String nombre, int precio){
+    public Snack(String id, String nombre, Integer precio){
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -27,11 +27,11 @@ public class Snack{
         this.nombre = nombre;
     }
 
-    public int getPrecio() {
+    public Integer getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(Integer precio) {
         this.precio = precio;
     }
 }

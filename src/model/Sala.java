@@ -8,7 +8,7 @@ public class Sala {
     private Pelicula pelicula;
     private ArrayList<Silla> sillas = new ArrayList<Silla>();
 
-    public Sala(String id, Pelicula pelicula){
+    public Sala(String id, Pelicula pelicula) {
         this.id = id;
         this.pelicula = pelicula;
     }
@@ -20,6 +20,7 @@ public class Sala {
     public void setPelicula(Pelicula pelicula) {
         this.pelicula = pelicula;
     }
+
     public String getId() {
         return id;
     }
@@ -28,10 +29,11 @@ public class Sala {
         return pelicula;
     }
 
-    public void addSilla(Silla silla){
+    public void addSilla(Silla silla) {
         sillas.add(silla);
     }
-    public void delSilla(Silla silla){
+
+    public void delSilla(Silla silla) {
         sillas.remove(silla);
     }
 }

@@ -14,6 +14,7 @@ import java.util.LinkedList;
  * the already built in queries, returning the results if there are any.<br>
  * This class implements the Singleton pattern in order to avoid multiple connections
  * to the database, and also for easier system use.
+ *
  * @author M&F
  */
 public class Query {
@@ -106,6 +107,7 @@ public class Query {
 
     /**
      * Removes a user from user table based on the userID.
+     *
      * @param userId
      */
     public void removeUser(String userId) {
@@ -124,13 +126,14 @@ public class Query {
 
     /**
      * Updates a user (based on ID) with the new data.
+     *
      * @param userId
      * @param fName
      * @param lName
      * @param rankName
      * @param pass
      */
-    public void updateUser(String userId, String fName, String lName, String rankName,  String pass) {
+    public void updateUser(String userId, String fName, String lName, String rankName, String pass) {
         String query = "UPDATE users " +
                 "SET fName='" + fName + "', lName='" + lName + "', " +
                 "rankID=(SELECT ID " +
@@ -151,6 +154,7 @@ public class Query {
 
     /**
      * Inserts a new user with the specified parameters.
+     *
      * @param fName
      * @param lName
      * @param rankName
@@ -175,6 +179,7 @@ public class Query {
 
     /**
      * Checks if a user exists, based on his first and last name.
+     *
      * @param fName
      * @param lName
      * @return check result.
@@ -233,13 +238,14 @@ public class Query {
 
     /**
      * Checks a user with these details exists into the database.
+     *
      * @param fName
      * @param lName
      * @param password
      * @return the rank of the user which has these fName, lName and correct password.<br>
      * Returns null if user was not found, or password was incorrect.
      */
-    public String verifyUserLogin(String fName, String lName, String password){
+    public String verifyUserLogin(String fName, String lName, String password) {
         String query = "SELECT UR.name " +
                 "FROM users U, user_ranks UR " +
                 "WHERE U.fName = '" + fName + "' AND U.lName='" + lName +
@@ -249,7 +255,7 @@ public class Query {
         // Tries to get data from database
         try {
             ResultSet rs = con.createStatement().executeQuery(query);
-            if (rs !=null && rs.next()){
+            if (rs != null && rs.next()) {
                 return rs.getString(1);
             }
         } catch (SQLException ex) {
@@ -265,8 +271,8 @@ public class Query {
      * @return ResultSet with all different flight class types.<br>
      * Returned elements: flight class types.
      */
-    public ResultSet getFlightClassTypes(){
-        String query ="SELECT DISTINCT name " +
+    public ResultSet getFlightClassTypes() {
+        String query = "SELECT DISTINCT name " +
                 "FROM flight_class_types " +
                 "ORDER BY name;";
 
@@ -330,6 +336,7 @@ public class Query {
 
     /**
      * Adds the specified flight class type into database.
+     *
      * @param flightClassTypeName
      */
     public void addFlightClassType(String flightClassTypeName) {
@@ -349,7 +356,7 @@ public class Query {
      * @return a ResultSet containing all flight classes with their details.<br>
      * Returned elements: ID, type, name, fcSeatsNo, ccSeatsNo, ecSeatsNo.
      */
-    public ResultSet getFlightClasses(){
+    public ResultSet getFlightClasses() {
         String query = "SELECT FC.ID, FCT.name, FC.name, FC.fcSeatsNo, FC.ccSeatsNo, ecSeatsNo " +
                 "FROM flight_classes FC, flight_class_types FCT " +
                 "WHERE FCT.ID=FC.flightClassTypeID " +
@@ -402,7 +409,7 @@ public class Query {
         // Tries to get data from database
         try {
             ResultSet rs = con.createStatement().executeQuery(query);
-            if (rs !=null && rs.next()) {
+            if (rs != null && rs.next()) {
                 return rs.getString(1);
             }
         } catch (SQLException ex) {
@@ -417,13 +424,12 @@ public class Query {
      * @param name
      * @param fcSeatsNo
      * @param ccSeatsNo
-     * @param ecSeatsNo
-     * Adds FlightClass into database. Checking if the FlightClass exist
-     * is not nesessary because Airline can contain many planes of the same type.
+     * @param ecSeatsNo Adds FlightClass into database. Checking if the FlightClass exist
+     *                  is not nesessary because Airline can contain many planes of the same type.
      */
     public void addFlightClass(String fcTypeId, String name, String fcSeatsNo,
-                               String ccSeatsNo, String ecSeatsNo){
-        String query ="INSERT INTO flight_classes (flightClassTypeID, name, fcSeatsNo, ccSeatsNo, ecSeatsNo) " +
+                               String ccSeatsNo, String ecSeatsNo) {
+        String query = "INSERT INTO flight_classes (flightClassTypeID, name, fcSeatsNo, ccSeatsNo, ecSeatsNo) " +
                 "VALUES ('" + fcTypeId + "', '" + name + "', '" + fcSeatsNo +
                 "', '" + ccSeatsNo + "', '" + ecSeatsNo + "');";
 
@@ -439,6 +445,7 @@ public class Query {
     /**
      * Updates the flight class info in the database, changing the name, type
      * and seatsNo(fc, cc, ec) with those passed as parameters.
+     *
      * @param id
      * @param fcTypeId
      * @param name
@@ -447,16 +454,15 @@ public class Query {
      * @param ecSeatsNo
      */
     public void updateFlightClass(String id, String fcTypeId, String name, String fcSeatsNo,
-                                  String ccSeatsNo, String ecSeatsNo){
+                                  String ccSeatsNo, String ecSeatsNo) {
         String query = "UPDATE flight_classes " +
                 "SET flightClassTypeID ='" + fcTypeId + "', name = '" + name + "', fcSeatsNo = '" +
-                fcSeatsNo + "', ccSeatsNo = '" + ccSeatsNo + "', ecSeatsNo = '" +ecSeatsNo+ "' " +
+                fcSeatsNo + "', ccSeatsNo = '" + ccSeatsNo + "', ecSeatsNo = '" + ecSeatsNo + "' " +
                 "WHERE ID = '" + id + "';";
         //Tries to execute statements.
-        try{
+        try {
             con.createStatement().executeUpdate(query);
-        }
-        catch(SQLException ex){
+        } catch (SQLException ex) {
             System.err.println("Error on method updateFlightClass\n" +
                     ex.getSQLState() + " " + ex.getMessage());
         }
@@ -467,13 +473,13 @@ public class Query {
      * It means the latest one, because ID is auto_incremented, so the last one will always be the biggest.
      */
     public String getLastAddedFlightClassId() {
-        String query ="SELECT MAX(ID) " +
+        String query = "SELECT MAX(ID) " +
                 "FROM flight_classes;";
 
         // Tries to get data from database
         try {
             ResultSet rs = con.createStatement().executeQuery(query);
-            if (rs !=null && rs.next()) {
+            if (rs != null && rs.next()) {
                 return rs.getString(1);
             }
         } catch (SQLException ex) {
@@ -485,9 +491,10 @@ public class Query {
 
     /**
      * Removes the Flight Class whith specified ID from the database.
+     *
      * @param id - of the flight class to be deleted
      */
-    public void removeFlightClass(String id){
+    public void removeFlightClass(String id) {
         String query = "DELETE FROM flight_classes " +
                 "WHERE ID = '" + id + "';";
 
@@ -503,6 +510,7 @@ public class Query {
 
     /**
      * Checks if a flight class has planes, based on flight class id.
+     *
      * @param flightClassId
      * @return check result
      */
@@ -536,7 +544,7 @@ public class Query {
      * Returned elements: id, airport1Id, airport2Id, departure, arrival,
      * planeAvailability, planeFullPrice.
      */
-    public ResultSet getFlightSchedules(){
+    public ResultSet getFlightSchedules() {
         String query = "SELECT FS.ID, P.ID, P.airport1ID, P.airport2ID, FS.departure, FS.arrival " +
                 "FROM planes P, flight_schedules FS " +
                 "WHERE FS.planeID = P.ID;";
@@ -553,6 +561,7 @@ public class Query {
 
     /**
      * Checks if there are reservations for the specified flight schedule.
+     *
      * @param flightScheduleId
      * @return
      */
@@ -583,6 +592,7 @@ public class Query {
 
     /**
      * Adds new flight schedule and takes care about time zone differences.
+     *
      * @param planeId
      * @param departureTimeStamp
      */
@@ -616,7 +626,7 @@ public class Query {
         // Tries to execute query
         try {
             con.createStatement().executeUpdate(query);
-        } catch(SQLException ex) {
+        } catch (SQLException ex) {
             System.err.println("Error on method addFlightSchedule\n" +
                     ex.getSQLState() + " " + ex.getMessage());
         }
@@ -624,6 +634,7 @@ public class Query {
 
     /**
      * Updates the flight schedule with given parameters.
+     *
      * @param flightScheduleId
      * @param planeId
      * @param departureTimeStamp
@@ -659,7 +670,7 @@ public class Query {
         // Tries to execute query
         try {
             con.createStatement().executeUpdate(query);
-        } catch(SQLException ex) {
+        } catch (SQLException ex) {
             System.err.println("Error on method updateFlightSchedule\n" +
                     ex.getSQLState() + " " + ex.getMessage());
         }
@@ -667,10 +678,11 @@ public class Query {
 
     /**
      * Removes flight schedule with the specified id.
+     *
      * @param ID
      */
-    public void removeFlightSchedule(String ID){
-        String query ="DELETE FROM flight_schedules " +
+    public void removeFlightSchedule(String ID) {
+        String query = "DELETE FROM flight_schedules " +
                 "WHERE ID = '" + ID + "';";
 
         // Tries to execute query
@@ -686,8 +698,8 @@ public class Query {
      * @param planeId
      * @return destination airport's time zone of the specified plane.
      */
-    private int getDestinationTimeZone(String planeId){
-        String query =" SELECT value"
+    private int getDestinationTimeZone(String planeId) {
+        String query = " SELECT value"
                 + " FROM time_zones "
                 + " WHERE ID = "
                 + "(SELECT timeZoneID "
@@ -720,8 +732,8 @@ public class Query {
      * @param planeId
      * @return departure airport's time zone of the specified plane.
      */
-    private int getDepartureTimeZone(String planeId){
-        String query =" SELECT value"
+    private int getDepartureTimeZone(String planeId) {
+        String query = " SELECT value"
                 + " FROM time_zones "
                 + " WHERE ID = "
                 + "(SELECT timeZoneID "
@@ -755,6 +767,7 @@ public class Query {
      * one hour are returned.<br>
      * Method cancels unconfirmed reservations if there are not enough seats to
      * satisfy the requested number.
+     *
      * @param departureDate
      * @param departureAirportId
      * @param arrivalAirportId
@@ -765,23 +778,30 @@ public class Query {
      */
     public LinkedList<String[]> searchFlights(String departureDate, String departureAirportId,
                                               String arrivalAirportId, String classType,
-                                              String requestedSeatsNo){
+                                              String requestedSeatsNo) {
         // Figures out which column will be used as number of tickets source,
         // based on class type.
         String ticketsNoColumnName = null;
         switch (classType) {
-            case "First"   : ticketsNoColumnName = "fcSeatsNo"; break;
-            case "Coach"   : ticketsNoColumnName = "ccSeatsNo"; break;
-            case "Economy" : ticketsNoColumnName = "ecSeatsNo"; break;
-            default : throw new IllegalArgumentException("Invalid flight class");
+            case "First":
+                ticketsNoColumnName = "fcSeatsNo";
+                break;
+            case "Coach":
+                ticketsNoColumnName = "ccSeatsNo";
+                break;
+            case "Economy":
+                ticketsNoColumnName = "ecSeatsNo";
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid flight class");
         }
 
         // Gets the current date
         // Adds +1 to month because the February is 0, not 1.
         Calendar c = Calendar.getInstance();
-        String currentYear  = c.get(Calendar.YEAR) + "";
+        String currentYear = c.get(Calendar.YEAR) + "";
         String currentMonth = c.get(Calendar.MONTH) + 1 + "";
-        String currentDay	= c.get(Calendar.DAY_OF_MONTH) + "";
+        String currentDay = c.get(Calendar.DAY_OF_MONTH) + "";
 
         // Makes sure month and day have the right format (2 digits)
         if (currentMonth.length() == 1) {
@@ -849,12 +869,13 @@ public class Query {
             try {
                 // Prepares variables for later use.
                 // It doesn't make sense to create them each loop iteration, so we make them here.
-                int requestedSeatsNoInt = Integer.parseInt(requestedSeatsNo);;
-                int totalSeatsNoInt		= 0;
-                int occupiedSeatsNoInt	= 0;
-                int freeSeatsNoInt		= 0;
+                int requestedSeatsNoInt = Integer.parseInt(requestedSeatsNo);
+                ;
+                int totalSeatsNoInt = 0;
+                int occupiedSeatsNoInt = 0;
+                int freeSeatsNoInt = 0;
                 ResultSet occupiedSeatsNoRS = null;
-                ResultSet unconfRS			= null;
+                ResultSet unconfRS = null;
 
                 while (foundFlights.next()) {
                     // Resets the result set object for later use.
@@ -983,6 +1004,7 @@ public class Query {
     /**
      * Adds current flight from "foundFlights" ResultSet into the validFlights LinkedList.<br>
      * String[] format = ID, fullPrice, departure, arrival, flightLength, planeManufacturer, planeModel.
+     *
      * @param foundFlights
      * @param validFlights
      * @throws SQLException
@@ -1032,6 +1054,7 @@ public class Query {
 
     /**
      * Removes from database the plane with the specified id.
+     *
      * @param id
      */
     public void removePlane(String id) {
@@ -1050,6 +1073,7 @@ public class Query {
 
     /**
      * Checks if there are flight schedules for the specified plane.
+     *
      * @param planeId
      * @return checking result
      */
@@ -1080,6 +1104,7 @@ public class Query {
 
     /**
      * Updates the database entry of the plane with the specified id.
+     *
      * @param planeId
      * @param flightClassId
      * @param airport1Id
@@ -1107,6 +1132,7 @@ public class Query {
 
     /**
      * Inserts a new plane into the database, with the specified details.
+     *
      * @param flightClassId
      * @param airport1Id
      * @param airport2Id
@@ -1142,7 +1168,7 @@ public class Query {
         // Tries to get data from database
         try {
             ResultSet rs = con.createStatement().executeQuery(query);
-            if (rs !=null && rs.next()) {
+            if (rs != null && rs.next()) {
                 return rs.getString(1);
             }
         } catch (SQLException ex) {
@@ -1173,6 +1199,7 @@ public class Query {
 
     /**
      * Creates a new reservation with the specified details.
+     *
      * @param flightScheduleId
      * @param price
      * @param status
@@ -1194,7 +1221,7 @@ public class Query {
             ResultSet rs = con.createStatement().executeQuery("SELECT MAX(ID) FROM reservations;");
 
             // Fetches and returns reservation ID
-            if (rs !=null && rs.next()) {
+            if (rs != null && rs.next()) {
                 return rs.getString(1);
             }
         } catch (SQLException ex) {
@@ -1238,6 +1265,7 @@ public class Query {
     /**
      * Pays the specified reservation.<br>
      * More precisely, it's marked as "confirmed".
+     *
      * @param reservationId
      */
     public void payReservation(String reservationId) {
@@ -1257,6 +1285,7 @@ public class Query {
     /**
      * Cancel the specified reservation.<br>
      * More precisely, it's marked as "canceled".
+     *
      * @param reservationId
      */
     public void cancelReservation(String reservationId) {
@@ -1354,7 +1383,7 @@ public class Query {
         // Tries to get data from database
         try {
             ResultSet rs = con.createStatement().executeQuery(query);
-            if (rs !=null && rs.next()){
+            if (rs != null && rs.next()) {
                 return Integer.parseInt(rs.getString(1));
             }
         } catch (NumberFormatException ne) {
@@ -1378,7 +1407,7 @@ public class Query {
         // Tries to get data from database
         try {
             ResultSet rs = con.createStatement().executeQuery(query);
-            if (rs !=null && rs.next()){
+            if (rs != null && rs.next()) {
                 return rs.getString(1).substring(0, 10);
             }
         } catch (SQLException ex) {
@@ -1392,6 +1421,7 @@ public class Query {
 
     /**
      * Creates a new ticket with the specified information.
+     *
      * @param gender
      * @param name
      * @param surname

@@ -1,19 +1,50 @@
 package model;
 
 public class Contrato {
-    private int fechIn;
+    private int id;
+    private String fechIn;
     private int salario;
     private String cargo;
-    public Contrato(int fechIn, int salario, String cargo) {
+    private int multiplex;
+    private int cliente;
+
+    public Contrato(int id, String fechIn, String cargo, int salario, int multiplex, int cliente) {
         this.fechIn = fechIn;
         this.salario = salario;
         this.cargo = cargo;
+        this.multiplex = multiplex;
+        this.cliente = cliente;
     }
-    public int getFechIn() {
+
+    public int getMultiplex() {
+        return multiplex;
+    }
+
+    public void setMultiplex(int multiplex) {
+        this.multiplex = multiplex;
+    }
+
+    public int getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(int cliente) {
+        this.cliente = cliente;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFechIn() {
         return fechIn;
     }
 
-    public void setFechIn(int fechIn) {
+    public void setFechIn(String fechIn) {
         this.fechIn = fechIn;
     }
 

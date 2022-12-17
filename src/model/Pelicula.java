@@ -2,7 +2,7 @@ package model;
 
 import java.lang.constant.Constable;
 
-public class Pelicula{
+public class Pelicula {
     private String id;
     private String titulo;
     private String[] idiomas;
@@ -10,7 +10,7 @@ public class Pelicula{
     private String genero;
 
 
-    public Pelicula(String id, String titulo, String[] idiomas, Integer duracion, String genero){
+    public Pelicula(String id, String titulo, String[] idiomas, Integer duracion, String genero) {
         this.id = id;
         this.titulo = titulo;
         this.idiomas = idiomas;
